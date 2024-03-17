@@ -1,0 +1,8 @@
+{
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "run-all": "./run-all.sh"
+  }
+}

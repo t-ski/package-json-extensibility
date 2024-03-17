@@ -1,0 +1,19 @@
+{
+  "name": "package-json-extensibility",
+  "version": "1.0.0",
+  "description": "Extensibility of hierarchically nested package.json files in monorepo architectures",
+  "main": "./lib/app.js",
+  "bin": {
+    "package-json-extensibility": "./lib/cli.js",
+    "emit-epj": "./lib/cli.js"
+  },
+  "scripts": {
+    "clean": "cd ./test/ && find . -name 'package.json' -delete",
+    "test:api": "node ./scripts/test.js",
+    "test:cli": "npm run clean && ./emit-epj.sh ./test/ --force && node ./scripts/test.js --dry",
+    "test": "npm run test:api && npm run test:cli"
+  },
+  "keywords": [ "package.json", "extensibility", "inheritance" ],
+  "author": "Thassilo Martin Schiepanski",
+  "license": "MIT"
+}

@@ -1,0 +1,5 @@
+Usage: emit-epj [path=.] [--arg|-arg-shorthand]*
+
+Flags:
+
+--force, -f         Override existing package.json files (default: false)
